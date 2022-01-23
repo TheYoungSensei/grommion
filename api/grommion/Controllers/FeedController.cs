@@ -48,5 +48,15 @@ namespace FeedAPI.Controllers
       return Ok(feed);
 
     }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<Feed>> DeleteFeed(int id)
+    {
+      var feed = feeds.Find(f => f.Id == id);
+      if (feed == null)
+        return NotFound("Feed not found");
+      feeds.Remove(feed);
+      return Ok(feed);
+    }
   }
 }
