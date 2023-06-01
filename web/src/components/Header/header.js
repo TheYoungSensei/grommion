@@ -1,6 +1,5 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Menu, X } from "react-feather"
 import {
   Container,
   Flex,
@@ -10,6 +9,7 @@ import {
   Button,
 } from "../ui"
 import NavItemGroup from "../nav-item-group"
+import { dekstopHeader } from './header.css'
 
 export default function Header() {
   const data = useStaticQuery(graphql`
@@ -61,7 +61,7 @@ export default function Header() {
 
   return (
     <header>
-      <Container>
+      <Container className={dekstopHeader}>
         <Space size={2} />
         <Flex variant="spaceBetween">
           <nav>
