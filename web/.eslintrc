@@ -5,7 +5,8 @@
     "prettier/react",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "@typescript-eslint/parser"
   ],
   "parser": "babel-eslint",
   "env": {
